@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mi primera página web con Bootstrap">
+    <meta name="author" content="Mauricio Abarca">
+    <meta name="keywords" content="actividad, curso, ejercicio, html, css, bootstrap, jquery">
+    <title>Funciones de jQuery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Mi CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('li#click').click(function (){
+                alert ("Hiciste click");
+            })
+
+            $('li#hide').click(function (){
+                $('li#click').hide();
+            })  
+            
+            $('li#show').click(function() {
+                $('li#click').show();
+            })
+
+            $('li#toggle').click(function() {
+                $('li#click').toggle();
+            })
+
+            $('li#slideDown').click(function() {
+                $('li#click').slideDown();
+            })
+            
+            $('li#slideUp').click(function() {
+                $('li#click').slideUp();
+            })
+
+            $('li#slideToggle').click(function() {
+                $('li#click').slideToggle();
+            })
+
+            $('li#fadeIn').click(function() {
+                $('li#click').fadeIn();
+            })
+
+            $('li#fadeOut').click(function() {
+                $('li#click').fadeOut();
+            })
+
+            $('li#addClass').click(function() {
+                $('li#click').addClass("text-danger");
+            })
+
+            $('li#before').click(function() {
+                $('h3#test').before("<h6> Before (Antes) </h6>");
+            })
+
+            $('li#after').click(function() {
+                $('h3#test').after("<h6> After (Despues)</h6>");
+            })
+
+            $('li#append').click(function() {
+                $('h3#test').append(" Append");
+            })
+
+            $('li#html').click(function() {
+                $('h3#test').html("<h1 id='test'>html</h1>");
+            })
+
+            $('li#attr').click(function() {
+                $('input:text#texto').attr('size', '50');
+            })
+
+            $('li#val').click(function() {
+                $('input:text#texto').val('agrego un texto aqui');
+            })
+
+            $('li#text').click(function() {
+                $('h3').text('Cambio el texto de todos los h3');
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ol>
+            <li id="click"><h3 id="test">.click</h3></li>
+            <li id="hide"><h3>.hide</h3></li>
+            <li id="show"><h3>.show</h3></li>
+            <li id="toggle"><h3>.toggle</h3></li>
+            <li id="slideDown"><h3>.slideDown</h3></li>
+            <li id="slideUp"><h3>.slideUp</h3></li>
+            <li id="slideToggle"><h3>.slideToggle</h3></li>
+            <li id="fadeIn"><h3>.fadeIn</h3></li>
+            <li id="fadeOut"><h3>.fadeOut</h3></li>
+            <li id="addClass"><h3>.addClass</h3></li>
+            <li id="before"><h3>.before</h3></li>
+            <li id="after"><h3>.after</h3></li>
+            <li id="append"><h3>.append</h3></li>
+            <li id="html"><h3>.html</h3></li>
+            <li id="attr"><h3>.attr</h3></li>
+            <li id="val"><h3>.val</h3></li>
+            <li id="text"><h3>.text</h3></li>
+        </ol>
+        <input id="texto" type="text" name="espacio" size="20">        
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
